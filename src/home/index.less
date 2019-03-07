@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+  margin: auto;
+  .avatar-wrapper {
+    // height: 60px;
+    .avatar {
+      width: 80px;
+      border-radius: 50%;
+      animation: avatar-rotate 6s linear infinite;
+      //         动画名称  一个周期所花时间  速度曲线  动画延迟多久开始 被播放的次数
+    }
+  }
+  @keyframes avatar-rotate {
+    from { transform: rotate(0) }
+    to { transform: rotate(360deg) }
+  }
+}
