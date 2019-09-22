@@ -7,7 +7,7 @@ const DIST_PATH = path.resolve(__dirname, '../dist');
 module.exports = {
   entry: {
     app: './src/index.js',
-    framework: ['react','react-dom'], // 抽出框架代码
+    framework: ['react', 'react-dom'], // 抽出框架代码
   },
   output: {
     path: DIST_PATH,
@@ -33,13 +33,11 @@ module.exports = {
             loader: 'postcss-loader', //自动加前缀
             options: { // 此处配置信息也可以在根目录下创建postcss.config.js
               plugins: [
-                require('autoprefixer')({
-                  browsers: ['last 5 version']
-                })
+                require('autoprefixer')
               ]
             }
           },
-          {  loader: "less-loader" }
+          { loader: "less-loader" }
         ]
       },
       {

@@ -5,6 +5,7 @@ const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.config');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const HappyPack = require('happypack');
 
 module.exports = merge(baseWebpackConfig, {
   mode: 'development',
@@ -20,7 +21,10 @@ module.exports = merge(baseWebpackConfig, {
       },
       hash: false
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new HappyPack({
+      loaders: ['babel-loader?presets[]=es2015']
+    })
   ],
   devServer: {
     port: 8080,

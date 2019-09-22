@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.less'
-import avatar from '../../public/img/avatar.jpg'
+import avatar from '../../../public/img/avatar.jpg'
 
 export default () => {
   return (
